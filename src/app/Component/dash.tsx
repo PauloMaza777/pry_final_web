@@ -1,4 +1,6 @@
-import Link from "next/link";
+// src/app/Component/dash.tsx
+
+import Link from 'next/link';
 import styles from './dash.module.css';
 
 export default function Dash() {

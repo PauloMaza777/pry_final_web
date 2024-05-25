@@ -1,13 +1,14 @@
-import Dashboard from "./Component/dash";
-import Formulario from "./Component/form";
+// src/app/page.tsx
 
-export default function Home() {
+import React from 'react';
+import Dash from './Component/dash';
+
+const Home: React.FC = () => {
   return (
     <div>
-      <Dashboard />
-      <Formulario />
-
+      <Dash />
     </div>
-
   );
-}
+};
+
+export default Home;
