@@ -5,36 +5,52 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './form.module.css';
-import logo from '../../../public/logo2.jpg'
 
 export default function Form() {
-    const [titulo, setTitulo] = useState('');
-    const [autor, setAutor] = useState('');
-    const [fechaPublicacion, setFechaPublicacion] = useState('');
+    const [tituloTema, setTitulo] = useState('');
+    const [nombreAutor, setAutor] = useState('');
+    const [fecha_creacion, setFechaPublicacion] = useState('');
     const [descripcion, setDescripcion] = useState('');
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
 
-        const tema = { titulo, autor, fechaPublicacion, descripcion };
+        const tema = { tituloTema, nombreAutor, fecha_creacion, descripcion };
 
-        // Aquí se agrera la lógica para enviar los datos a una API
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+            ...tema
+        });
+
+        var requestOptions:RequestInit = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:3100/foros", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
         console.log('Datos del tema:', tema);
 
         // Mostrar mensaje de alerta
         alert('Se agregaron correctamente los datos');
 
-        // Limpiar los campos del formulario
-        setTitulo('');
-        setAutor('');
-        setFechaPublicacion('');
-        setDescripcion('');
+        // // Limpiar los campos del formulario
+        // setTitulo('');
+        // setAutor('');
+        // setFechaPublicacion('');
+        // setDescripcion('');
     };
 
     return (
-        
+
         <div className={styles.container}>
-            <img src={`${logo}`} alt="Logo" className={styles.logo} />
+            <img src='/logo2.jpg' alt="Logo" className={styles.logo} />
             <h1 className={styles.title}>AGREGAR TEMA</h1>
             <form onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.formGroup}>
@@ -42,7 +58,7 @@ export default function Form() {
                     <input
                         type="text"
                         id="titulo"
-                        value={titulo}
+                        value={tituloTema}
                         onChange={(e) => setTitulo(e.target.value)}
                         className={styles.input}
                         required
@@ -53,7 +69,7 @@ export default function Form() {
                     <input
                         type="text"
                         id="autor"
-                        value={autor}
+                        value={nombreAutor}
                         onChange={(e) => setAutor(e.target.value)}
                         className={styles.input}
                         required
@@ -64,7 +80,7 @@ export default function Form() {
                     <input
                         type="date"
                         id="fechaPublicacion"
-                        value={fechaPublicacion}
+                        value={fecha_creacion}
                         onChange={(e) => setFechaPublicacion(e.target.value)}
                         className={styles.input}
                         required

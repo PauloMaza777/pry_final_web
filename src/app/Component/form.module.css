@@ -74,7 +74,12 @@
 }
 
 .logo {
-    width: 200px; /* Ajusta el tamaño según sea necesario */
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 20px;
 }
 
