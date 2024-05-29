@@ -24,7 +24,7 @@ export default function Form() {
             ...tema
         });
 
-        var requestOptions:RequestInit = {
+        var requestOptions: RequestInit = {
             method: 'POST',
             headers: myHeaders,
             body: raw,
@@ -40,11 +40,11 @@ export default function Form() {
         // Mostrar mensaje de alerta
         alert('Se agregaron correctamente los datos');
 
-        // // Limpiar los campos del formulario
-        // setTitulo('');
-        // setAutor('');
-        // setFechaPublicacion('');
-        // setDescripcion('');
+        // Limpiar los campos del formulario
+        setTitulo('');
+        setAutor('');
+        setFechaPublicacion('');
+        setDescripcion('');
     };
 
     return (
