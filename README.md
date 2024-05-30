@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GAMERS CONNECT
 
-## Getting Started
+![alt text](public\logo2.jpg)
 
-First, run the development server:
+## Descripción del proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+En este proyecto, se busca desarrollar una aplicación web utilizando React y Node.js con TypeScript, enfocada en la creación de un foro sobre las últimas tendencias en videojuegos. La aplicación contará con una interfaz de usuario (frontend) interactiva y fácil de entender, y un backend robusto utilizando una API.
+
+La finalidad del proyecto es ofrecer una plataforma donde los usuarios puedan agregar y consultar noticias relacionadas con videojuegos. La información será almacenada en una base de datos MySQL, gestionada a través de DBeaver, y todo el entorno de desarrollo será manejado y desplegado utilizando Docker Desktop para asegurar una fácil configuración y consistencia del entorno
+
+## Estructura del proyecto
+
+```sh
+Estructura del Proyecto
+
+Public
+
+    public/
+
+        logo2.jpg: Aquí se almacena el logo utilizado en la aplicación.
+
+Src
+    
+    src/
+        
+        app/
+            
+            component/
+                
+                dash.tsx: Contiene la lógica y el diseño del dashboard donde se muestran los temas del foro.
+                
+                form.tsx: Contiene la lógica y el diseño del formulario donde los usuarios pueden agregar nuevos temas.
+                
+                dash.module.css: Archivo de estilos CSS para el dashboard.
+                form.module.css: Archivo de estilos CSS para el formulario.
+            
+            form/
+
+                page.tsx: Archivo principal que simplemente manda a llamar al componente del formulario.
+        
+        page.tsx: Archivo principal de la aplicación que manda a llamar al
+        dashboard para ser visualizado en la página principal.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tal como se muestra en la siguiente imagen:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![alt text](image.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Requisitos de instalación
 
-## Learn More
+Asegúrate de tener instalado y configurado Docker antes de comenzar.
 
-To learn more about Next.js, take a look at the following resources:
+- [Node.js](https://nextjs.org)
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [DBeaver](https://dbeaver.io)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Instrucciones para la instalación de Frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clonar el repositorio en la máquina local:
+   
+   ```sh
+   git clone https://github.com/PauloMaza777/pry_final_web
+   ```
 
-## Deploy on Vercel
+2. Navegar al directorio del proyecto:
+   
+   ```sh
+   cd pry_final_web
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Ejecutar el siguiente comando para iniciar abrir el codigo en Visual Studio:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```sh
+    code .
+    ```
+3. Ejecutar el siguiente comando para correr el programa en el localhost:
+
+    ```sh
+    npm run dev
+    ```
+
+    > **IMPORTANTE**
+    >
+    > Debe estar todo bien instalado y descargado, si no, mandara error 
+    > cuando se corra el programa
+
+5. El proyecto estará disponible en `http://localhost:3000`.
+
+## Instrucciones para la instalación del Backend
+
+1. Clonar el repositorio en la máquina local:
+   
+   ```sh
+   git clone https://github.com/PauloMaza777/T4-01_Repositorio_del_proyecto2
+   ```
+
+2. Navegar al directorio del proyecto:
+   
+   ```sh
+   cd node-restful
+   ```
+
+3. Ejecutar el siguiente comando para iniciar los contenedores en Docker Desktop:
+
+    ```sh
+    docker-compose up -d
+    ```
+3. Ejecutar el siguiente comando para bajar los contenedores con los volumenes:
+
+    ```sh
+    docker-compose downn -v
+    ```
+
+    > **IMPORTANTE**
+    >
+    > Debe estar iniciado el Docker engine para ejecutar el comando anterior,
+    > si no lo está, se devolverá un mensaje de error indicando que no se
+    > encontró el docker daemon.
+
+5. La API estará disponible en `http://localhost:3100`.
+
+## Prototipos de la vista y cómo utilizarlas (tipo manual)
+
+A continuación, mostraremos los prototipos que se desarrollaron en este trabajo
+
+En esta imagen podemos ver como el contenedor en Docker funcoona correctamente cuando lo ponemos en línea
+
+![alt text](image-1.png)
+
+En esta imagen mostramos como se ve el llenado de un tema en el formulario, llenando los campos de titulo, autor del tema, fecha en la que es publicada y una pequeña descripción de lo que trata el tema con 2 botones para agregar y regresar a la pagina principal
+
+![alt text](image-2.png)
+
+En esta imagen mostramos el mensaje de confirmación que nos dice que el tema se agrego correctamente
+
+![alt text](image-4.png)
+
+Y por último la imagen donde nos muestra el tema agregado correctamente con todos los parametros que le mandamos anteriormente
+
+![alt text](image-5.png)
+## Descripción de las pruebas y cómo ejecutarlas.
+
+
+## URL de despliegue en Vercel.
