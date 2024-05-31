@@ -19,7 +19,7 @@ export default function Dash() {
     const [temas, setTemas] = useState<Tema[]>([]);
 
     useEffect(() => {
-        fetch("https://t4-01-repositorio-del-proyecto2.vercel.app")
+        fetch("http://localhost:3100/foros")
             .then(response => response.json())
             .then(data => setTemas(data))
             .catch(error => console.error('Error fetching data:', error));
