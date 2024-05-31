@@ -154,11 +154,11 @@ Los mockups principales que tuve en mente al querer desarrollar esta aplicación
 
 ![alt text](image-2.png)
 
-7. En esta imagen mostramos el mensaje de confirmación que nos dice que el tema se agregó correctamente
+6. En esta imagen mostramos el mensaje de confirmación que nos dice que el tema se agregó correctamente
 
 ![alt text](image-4.png)
 
-8. Y por último la imagen donde nos muestra el tema agregado correctamente con todos los parámetros que le mandamos anteriormente
+7. Y por último la imagen donde nos muestra el tema agregado correctamente con todos los parámetros que le mandamos anteriormente
 
 ![alt text](image-5.png)
 
@@ -175,5 +175,11 @@ fue el comando que utilizamos para correr el testing una vez que hayamos acabado
 para antes de eso, tuvimos que haber importado e instalado todas las dependencias que nos ayudaron a realizar este proyecto
 
 1. Prueba de testeo, 2 confirmados, 1 erroneo
+
 ![alt text](image-9.png)
+
 ## URL de despliegue en Vercel.
+
+Click en el siguiente link para la muestra del proyecto en VERCEL
+
+- [Proyecto Final en vercel](https://pry-final-web.vercel.app)
