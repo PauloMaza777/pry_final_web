@@ -31,7 +31,7 @@ export default function Form() {
             redirect: 'follow'
         };
 
-        fetch("http://localhost:3100/foros", requestOptions)
+        fetch("https://t4-01-repositorio-del-proyecto2.vercel.app", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
@@ -101,6 +101,7 @@ export default function Form() {
             <Link href="/" className={styles.link}>
                 REGRESAR
             </Link>
+            {/* <h2>renderiza el formulario con los datos esperados</h2>  PRUEBA DEL TESTING */}
         </div>
     );
 }

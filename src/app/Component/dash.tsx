@@ -19,7 +19,7 @@ export default function Dash() {
     const [temas, setTemas] = useState<Tema[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:3100/foros")
+        fetch("https://t4-01-repositorio-del-proyecto2.vercel.app")
             .then(response => response.json())
             .then(data => setTemas(data))
             .catch(error => console.error('Error fetching data:', error));
@@ -48,9 +48,11 @@ export default function Dash() {
                                 required
                             ></textarea>
                         </div>
+                        
                     </div>
                 ))}
             </div>
+            {/* <h2>Cargando...</h2>    PRUEBA DEL TESTING*/}
         </div>
     );
 }
